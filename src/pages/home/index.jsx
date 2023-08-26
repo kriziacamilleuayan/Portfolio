@@ -1,9 +1,8 @@
 import Button from "@mui/material/Button";
-import { GameButton } from "../components/button";
+import { GameButton } from "../../components/button";
 import { Box, Container } from "@mui/material";
-import { Link } from "react-router-dom";
 import Granim from "react-granim";
-import bgCover from "../assets/bg.jpg";
+import bgCover from "../../assets/bg.jpg";
 
 const Home = () => {
   const props = {
@@ -38,9 +37,7 @@ const Home = () => {
 
           <Button variant="contained">Text</Button>
 
-          <Link to={`/resume`}>
-            <a>Your Name</a>
-          </Link>
+          <a href="/resume">Your Name</a>
 
           {[...new Array(22)]
             .map(

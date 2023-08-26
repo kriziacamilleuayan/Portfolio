@@ -33,8 +33,13 @@ const ElevationScroll = (props) => {
 const drawerWidth = 240;
 const Navbar = (props) => {
   const { window } = props; // eslint-disable-line react/prop-types
-  const navItems = ["Home", "Resume", "About"];
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Resume", href: "/resume" },
+    { name: "About", href: "/about" },
+  ];
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -48,9 +53,13 @@ const Navbar = (props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.name} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              component="a"
+              href={item.href}
+            >
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -90,8 +99,13 @@ const Navbar = (props) => {
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
+                <Button
+                  key={item.name}
+                  sx={{ color: "#fff" }}
+                  component="a"
+                  href={item.href}
+                >
+                  {item.name}
                 </Button>
               ))}
             </Box>
