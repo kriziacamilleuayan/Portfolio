@@ -1,12 +1,35 @@
 import Button from "@mui/material/Button";
 import { GameButton } from "../components/button";
-import Navbar from "../components/navbar";
 import { Box, Container } from "@mui/material";
+import { Link } from "react-router-dom";
+import Granim from "react-granim";
+import bgCover from "../assets/bg.jpg";
 
-const Root = () => {
+const Home = () => {
+  const props = {
+    id: "canvas-image-blending",
+    direction: "top-bottom",
+    isPausedWhenNotInView: true,
+    image: {
+      source: bgCover,
+      blendingMode: "multiply",
+    },
+    states: {
+      "default-state": {
+        gradients: [
+          ["#29323c", "#485563"],
+          ["#FF6B6B", "#556270"],
+          ["#80d3fe", "#7ea0c4"],
+          ["#f0ab51", "#eceba3"],
+        ],
+        transitionSpeed: 7000,
+      },
+    },
+  };
+
   return (
     <>
-      <Navbar />
+      <Granim {...props} />
       <Container>
         <Box sx={{ my: 2 }}>
           <div>hell</div>
@@ -14,7 +37,11 @@ const Root = () => {
           <GameButton variant="contained">this is GameButton</GameButton>
 
           <Button variant="contained">Text</Button>
-          <a href={`/resume`}>Your Name</a>
+
+          <Link to={`/resume`}>
+            <a>Your Name</a>
+          </Link>
+
           {[...new Array(22)]
             .map(
               () => `Cras mattis consectetur purus sit amet fermentum.
@@ -29,4 +56,4 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
   );
 };
 
-export default Root;
+export default Home;

@@ -4,21 +4,25 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./routes/home.jsx";
 import Resume from "./routes/resume.jsx";
 
-import "@fontsource/open-sans/300.css";
-import "@fontsource/open-sans/400.css";
-import "@fontsource/open-sans/500.css";
-import "@fontsource/open-sans/700.css";
-import "@fontsource/press-start-2p/400.css";
+import "@fontsource/open-sans";
+import "@fontsource/press-start-2p";
 import "./index.css";
+import Layout from "./routes/layout.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "resume",
-    element: <Resume />,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "resume",
+        element: <Resume />,
+      },
+    ],
   },
 ]);
 

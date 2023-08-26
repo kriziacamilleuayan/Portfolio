@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Resume = () => {
   return (
     <>
       <div>resume</div>
-      <a href={`/`}>Your Name</a>
+      <Link to={`/`}>
+        <a>Your Name</a>
+      </Link>
     </>
   );
 };
