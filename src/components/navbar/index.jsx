@@ -76,7 +76,9 @@ const Navbar = (props) => {
                   className={({ isActive }) => (isActive ? "isActive" : "")}
                   key={item.name}
                 >
-                  <NavButton key={item.name}>{item.name}</NavButton>
+                  <NavButton className="animate__animated animate__flash animate__slow">
+                    {item.name}
+                  </NavButton>
                 </NavLink>
               ))}
             </NavBox>

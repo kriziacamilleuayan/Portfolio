@@ -2,6 +2,7 @@ import { Box, Container, styled } from "@mui/material";
 import { PrimaryColors } from "../../const";
 import DrawIcon from "@mui/icons-material/Draw";
 import CodeIcon from "@mui/icons-material/Code";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Skills = () => {
   return (
@@ -17,24 +18,28 @@ const Skills = () => {
           margin: { xs: "0", sm: "24px" },
         }}
       >
-        <DrawIcon sx={iconStyle} />
-        <h2>Designer</h2>
-        <p className="subHeader">Let the imagination comes to life</p>
-        <Box>
-          <p>User Interface</p>
-          <p>User Experience</p>
-          <p>Figma</p>
-          <p>Adobe Photoshop</p>
-          <p>Clip Studio Paint</p>
-          <p>Bootstrap</p>
-          <p>Tailwind CSS</p>
-          <p>Chakra UI</p>
-          <p>Material UI</p>
-          <p>Materialize CSS</p>
-          <p>Sass</p>
-          <p>styled-components</p>
-          <p>emotion</p>
-        </Box>
+        <ScrollAnimation animateIn="animate__slideInDown" animateOnce={true}>
+          <DrawIcon sx={iconStyle} />
+          <h2>Designer</h2>
+          <p className="subHeader">Let the imagination comes to life</p>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__slideInLeft" animateOnce={true}>
+          <Box>
+            <p>User Interface</p>
+            <p>User Experience</p>
+            <p>Figma</p>
+            <p>Adobe Photoshop</p>
+            <p>Clip Studio Paint</p>
+            <p>Bootstrap</p>
+            <p>Tailwind CSS</p>
+            <p>Chakra UI</p>
+            <p>Material UI</p>
+            <p>Materialize CSS</p>
+            <p>Sass</p>
+            <p>styled-components</p>
+            <p>emotion</p>
+          </Box>
+        </ScrollAnimation>
       </SkillsContainer>
       <SkillsContainer
         sx={{
@@ -42,24 +47,28 @@ const Skills = () => {
           margin: { xs: "24px 0", sm: "24px" },
         }}
       >
-        <CodeIcon sx={iconStyle} />
-        <h2>Developer</h2>
-        <p className="subHeader">Write clean and functional code</p>
-        <Box>
-          <p>React</p>
-          <p>TypeScript</p>
-          <p>JavaScript</p>
-          <p>React Native</p>
-          <p>NextJS</p>
-          <p>Redux</p>
-          <p>RxJS</p>
-          <p>git</p>
-          <p>Python</p>
-          <p>Github</p>
-          <p>Gitlab</p>
-          <p>Visual Studio Code</p>
-          <p>Vercel</p>
-        </Box>
+        <ScrollAnimation animateIn="animate__slideInDown" animateOnce={true}>
+          <CodeIcon sx={iconStyle} />
+          <h2>Developer</h2>
+          <p className="subHeader">Write clean and functional code</p>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__slideInRight" animateOnce={true}>
+          <Box>
+            <p>React</p>
+            <p>TypeScript</p>
+            <p>JavaScript</p>
+            <p>React Native</p>
+            <p>NextJS</p>
+            <p>Redux</p>
+            <p>RxJS</p>
+            <p>git</p>
+            <p>Python</p>
+            <p>Github</p>
+            <p>Gitlab</p>
+            <p>Visual Studio Code</p>
+            <p>Storybook</p>
+          </Box>
+        </ScrollAnimation>
       </SkillsContainer>
     </MainContainer>
   );

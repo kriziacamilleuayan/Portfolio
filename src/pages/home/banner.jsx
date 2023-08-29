@@ -3,6 +3,7 @@ import Granim from "react-granim";
 import bgCover from "../../assets/bg2.jpg";
 import { granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Banner = () => {
   const props = {
@@ -50,21 +51,24 @@ const Banner = () => {
         <BannerContainer>
           <BannerContent>
             <Box className="bannerText">
-              <h3>Hi, my name is</h3>
-              <Box className="nameContainer">
+              <h3 className="animate__animated animate__fadeInRightBig animate__slow">
+                Hi, my name is
+              </h3>
+              <Box className="nameContainer animate__animated animate__fadeInRightBig animate__slower">
                 <TypeAnimation
                   sequence={sequence}
                   wrapper="h1"
+                  className="animate__animated animate__fadeInRightBig"
                   speed={25}
                   style={{ fontSize: "2em", display: "inline-block" }}
                   repeat={Infinity}
                 />
               </Box>
-              <h2>
+              <h2 className="animate__animated animate__fadeInRightBig animate__slow">
                 I am a <span>Front-End Engineer</span>.
               </h2>
             </Box>
-            <Box className="bannerLeft">
+            <Box className="animate__animated animate__fadeInRightBig bannerLeft">
               <Granim {...props2} />
             </Box>
           </BannerContent>

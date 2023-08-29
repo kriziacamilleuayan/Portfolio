@@ -2,6 +2,7 @@ import { Box, Button, Container, styled } from "@mui/material";
 import { PrimaryColors } from "../../const";
 import SendIcon from "@mui/icons-material/Send";
 import { NavLink } from "react-router-dom";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Contact = () => {
   const handleMail = (e) => {
@@ -21,8 +22,10 @@ const Contact = () => {
     >
       <Container>
         <Box>
-          <h2>Interested in working together?</h2>
-          <p>It&apos;s always a pleasure to hear new and innovative ideas!</p>
+          <ScrollAnimation animateIn="animate__slideInDown" animateOnce={true}>
+            <h2>Interested in working together?</h2>
+            <p>It&apos;s always a pleasure to hear new and innovative ideas!</p>
+          </ScrollAnimation>
 
           <Box
             sx={{
@@ -34,19 +37,22 @@ const Contact = () => {
             }}
             gap="32px"
           >
-            <MailButton onClick={handleMail}>
-              Mail me
-              <SendIcon
-                sx={{
-                  fontSize: 40,
-                  paddingLeft: "12px",
-                }}
-              />
-            </MailButton>
-
-            <NavLink to="/resume">
-              <ResumeButton>or check out my Resume!</ResumeButton>
-            </NavLink>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
+              <MailButton onClick={handleMail}>
+                Mail me
+                <SendIcon
+                  sx={{
+                    fontSize: 40,
+                    paddingLeft: "12px",
+                  }}
+                />
+              </MailButton>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__zoomIn" animateOnce={true}>
+              <NavLink to="/resume">
+                <ResumeButton>or check out my Resume!</ResumeButton>
+              </NavLink>
+            </ScrollAnimation>
           </Box>
         </Box>
       </Container>

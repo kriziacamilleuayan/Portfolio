@@ -11,7 +11,7 @@ import "@fontsource/press-start-2p";
 import "@fontsource/montserrat";
 import "@fontsource-variable/source-code-pro";
 import "./index.css";
-import "animate.css";
+import "animate.css/animate.min.css";
 
 const router = createBrowserRouter([
   {

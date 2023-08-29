@@ -2,21 +2,37 @@ import { Box, Container, IconButton, styled } from "@mui/material";
 import { PrimaryColors, github, linkedIn } from "../../const";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Footer = () => {
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
 
+  const handleMail = (e) => {
+    window.location.href = "mailto:kriziacamilleuayan@gmail.com";
+    e.preventDefault();
+  };
+
   return (
     <FooterBox>
       <FooterContainer maxWidth="xxl">
-        <ButtonSocials size="large" onClick={() => handleClick(github)}>
-          <GitHubIcon />
-        </ButtonSocials>
-        <ButtonSocials size="large" onClick={() => handleClick(linkedIn)}>
-          <LinkedInIcon />
-        </ButtonSocials>
+        <ScrollAnimation animateIn="animate__rotateIn" animateOnce={true}>
+          <ButtonSocials size="large" onClick={() => handleClick(github)}>
+            <GitHubIcon />
+          </ButtonSocials>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__rotateIn" animateOnce={true}>
+          <ButtonSocials size="large" onClick={() => handleClick(linkedIn)}>
+            <LinkedInIcon />
+          </ButtonSocials>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__rotateIn" animateOnce={true}>
+          <ButtonSocials size="large" onClick={handleMail}>
+            <MailOutlineIcon />
+          </ButtonSocials>
+        </ScrollAnimation>
       </FooterContainer>
 
       <SubFooterBox>
