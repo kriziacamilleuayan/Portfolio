@@ -1,6 +1,6 @@
 import { Button } from "@mui/base";
 import { Box } from "@mui/system";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import DocumentResume from "./documentResume";
 
 const Resume = () => {
@@ -12,6 +12,9 @@ const Resume = () => {
       }}
     >
       <div>resume</div>
+      <PDFViewer width={500} height={500}>
+        <DocumentResume />
+      </PDFViewer>
 
       <PDFDownloadLink document={<DocumentResume />} fileName="somename.pdf">
         {({ blob, url, loading, error }) =>

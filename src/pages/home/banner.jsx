@@ -3,7 +3,6 @@ import Granim from "react-granim";
 import bgCover from "../../assets/bg2.jpg";
 import { granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
-import ScrollAnimation from "react-animate-on-scroll";
 
 const Banner = () => {
   const props = {
