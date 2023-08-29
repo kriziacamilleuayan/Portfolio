@@ -2,7 +2,8 @@ import Button from "@mui/material/Button";
 import { GameButton } from "../../components/button";
 import { Box, Container } from "@mui/material";
 import Granim from "react-granim";
-import bgCover from "../../assets/bg.jpg";
+import bgCover from "../../assets/bg2.jpg";
+import { granimGradient } from "../../const";
 
 const Home = () => {
   const props = {
@@ -15,12 +16,7 @@ const Home = () => {
     },
     states: {
       "default-state": {
-        gradients: [
-          ["#29323c", "#485563"],
-          ["#FF6B6B", "#556270"],
-          ["#80d3fe", "#7ea0c4"],
-          ["#f0ab51", "#eceba3"],
-        ],
+        gradients: granimGradient,
         transitionSpeed: 7000,
       },
     },
@@ -33,7 +29,12 @@ const Home = () => {
         <Box sx={{ my: 2 }}>
           <div>hell</div>
 
-          <GameButton variant="contained">this is GameButton</GameButton>
+          <GameButton
+            variant="contained"
+            className="animate__animated animate__fadeInDown"
+          >
+            this is GameButton
+          </GameButton>
 
           <Button variant="contained">Text</Button>
 
