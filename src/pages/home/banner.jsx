@@ -39,7 +39,7 @@ const Banner = () => {
     "Krizia Uayan",
     2000,
     "Camille Uay",
-    2000,
+    1000,
     "Krizia Camille Uayan",
     25000,
   ];

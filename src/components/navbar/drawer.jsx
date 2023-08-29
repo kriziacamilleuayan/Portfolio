@@ -37,7 +37,7 @@ const DrawerNav = (props) => {
       >
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
           <Typography variant="h6" sx={{ my: 2 }}>
-            Portfolio
+            {/* Portfolio */}
           </Typography>
           <Divider />
           <List>

@@ -67,7 +67,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ flexGrow: 1, display: { sm: "block" } }}
             >
-              Portfolio
+              {/* Portfolio */}
             </Typography>
             <NavBox sx={{ display: { xs: "none", sm: "block" } }}>
               {NavItems.map((item) => (

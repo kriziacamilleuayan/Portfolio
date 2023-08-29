@@ -4,7 +4,15 @@ import { PrimaryColors } from "../../const";
 
 const Introduction = () => {
   return (
-    <MainContainer>
+    <MainContainer
+      sx={{
+        clipPath: {
+          xs: "none",
+          sm: "polygon(0% 0%, 100% 0%, 100% 85%, 50% 65%, 0 85%)",
+        },
+        paddingBottom: { xs: "80px", sm: "300px" },
+      }}
+    >
       <Container>
         <Box>
           <h2>You can call me Krizia, nice to meet you!</h2>
@@ -29,7 +37,7 @@ const MainContainer = styled(Box)({
   background: PrimaryColors[3],
   paddingTop: "80px",
   paddingBottom: "300px",
-  clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 50% 65%, 0 85%)",
+  marginBottom: "24px",
 
   h2: {
     margin: "0",

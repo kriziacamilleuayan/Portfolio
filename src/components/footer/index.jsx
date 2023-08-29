@@ -34,7 +34,7 @@ export default Footer;
 
 const FooterBox = styled(Box)({
   height: "200px",
-  background: "#3f1651",
+  background: PrimaryColors[4],
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
