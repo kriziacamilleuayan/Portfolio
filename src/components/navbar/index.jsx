@@ -71,17 +71,13 @@ const Navbar = (props) => {
             </Typography>
             <NavBox sx={{ display: { xs: "none", sm: "block" } }}>
               {NavItems.map((item) => (
-                <>
-                  <NavLink
-                    to={item.href}
-                    className={({ isActive }) => (isActive ? "isActive" : "")}
-                    key={item.name}
-                  >
-                    <NavButton key={item.name} component="a">
-                      {item.name}
-                    </NavButton>
-                  </NavLink>
-                </>
+                <NavLink
+                  to={item.href}
+                  className={({ isActive }) => (isActive ? "isActive" : "")}
+                  key={item.name}
+                >
+                  <NavButton key={item.name}>{item.name}</NavButton>
+                </NavLink>
               ))}
             </NavBox>
           </Toolbar>
@@ -99,7 +95,7 @@ const Navbar = (props) => {
 export default Navbar;
 
 const NavBox = styled(Box)({
-  ".isActive > a": {
+  ".isActive > button": {
     borderColor: "white",
   },
 });

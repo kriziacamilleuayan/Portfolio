@@ -38,6 +38,7 @@ const FooterBox = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  zIndex: 2,
 });
 
 const SubFooterBox = styled(Box)({

@@ -1,5 +1,6 @@
 body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat;
+  transition: "0.3s",
 }
 
 /* width */
@@ -21,7 +22,7 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #653780; 
+  background: #653780;
 }
 
 

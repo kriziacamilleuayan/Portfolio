@@ -8,6 +8,8 @@ import About from "./pages/about";
 
 import "@fontsource/open-sans";
 import "@fontsource/press-start-2p";
+import "@fontsource/montserrat";
+import "@fontsource-variable/source-code-pro";
 import "./index.css";
 import "animate.css";
 
