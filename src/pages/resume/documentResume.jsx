@@ -73,8 +73,8 @@ const DocumentResume = () => (
   <Document
     author="Krizia Camille Uayan"
     keywords="front end engineer, resume"
-    subject="Resume of Krizia Camille Uayan"
-    title="Resume"
+    subject="Resume - Krizia Camille Uayan"
+    title="Resume - Krizia Camille Uayan"
   >
     <Resume size="A4" />
   </Document>

@@ -1,16 +1,15 @@
 import { Box } from "@mui/system";
+import { PrimaryColors } from "../../const";
+import { Container, styled } from "@mui/material";
 
 const About = () => {
   return (
-    <Box
-      style={{
-        background: "light-gray",
-        height: "100vh",
-      }}
-    >
-      about
-    </Box>
+    <Container sx={{ height: "100vh" }}>
+      <Header>About Me.</Header>
+    </Container>
   );
 };
+
+const Header = styled("h1")({});
 
 export default About;
