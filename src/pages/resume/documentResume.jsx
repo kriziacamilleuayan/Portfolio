@@ -1,99 +1,79 @@
-import {
-  Text,
-  Font,
-  Page,
-  View,
-  Image,
-  Document,
-  StyleSheet,
-} from "@react-pdf/renderer";
+import { Font, Page, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { PrimaryColors } from "../../const";
+import Header from "./header";
+import Profile from "./profile";
 
-// import Skills from "./Skills";
-// import Education from "./Education";
-// import Experience from "./Experience";
-
-const styles = StyleSheet.create({
-  page: {
-    padding: 0,
-  },
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    "@media max-width: 400": {
-      flexDirection: "column",
-    },
-  },
-  image: {
-    marginBottom: 10,
-  },
-  leftColumn: {
-    flexDirection: "column",
-    width: 170,
-    paddingTop: 30,
-    paddingRight: 15,
-    backgroundColor: "red",
-    height: "100%",
-    "@media max-width: 400": {
-      width: "100%",
-      paddingRight: 0,
-    },
-    "@media orientation: landscape": {
-      width: 200,
-    },
-  },
-  footer: {
-    fontSize: 12,
-    fontFamily: "Lato Bold",
-    textAlign: "center",
-    marginTop: 15,
-    paddingTop: 5,
-    borderWidth: 3,
-    borderColor: "gray",
-    borderStyle: "dashed",
-    "@media orientation: landscape": {
-      marginTop: 10,
-    },
-  },
-});
+import MontserratRegular from "./fonts/Montserrat-Regular.ttf";
+import MontserratBold from "./fonts/Montserrat-Bold.ttf";
+import MontserratSemiBold from "./fonts/Montserrat-SemiBold.ttf";
+import SourceCodeProRegular from "./fonts/SourceCodePro-Regular.ttf";
+import SourceCodeProBold from "./fonts/SourceCodePro-Bold.ttf";
+import SourceCodeProSemiBold from "./fonts/SourceCodePro-SemiBold.ttf";
+import Details from "./details";
+import Skills from "./skills";
+import Links from "./links";
+import Languages from "./languages";
+import Employment from "./employment";
+import Education from "./education";
 
 Font.register({
   family: "Montserrat",
-  src: `https://fonts.cdnfonts.com/css/montserrat`,
+  fonts: [
+    {
+      src: MontserratRegular,
+    },
+    {
+      src: MontserratSemiBold,
+      fontWeight: "semiBold",
+    },
+    {
+      src: MontserratBold,
+      fontWeight: "bold",
+    },
+  ],
 });
 
 Font.register({
-  family: "Lato",
-  src: `https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf`,
-});
-
-Font.register({
-  family: "Lato Italic",
-  src: `https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf`,
-});
-
-Font.register({
-  family: "Lato Bold",
-  src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
+  family: "SourceCodePro",
+  fonts: [
+    {
+      src: SourceCodeProRegular,
+    },
+    {
+      src: SourceCodeProBold,
+      fontWeight: "semiBold",
+    },
+    {
+      src: SourceCodeProSemiBold,
+      fontWeight: "bold",
+    },
+  ],
 });
 
 const Resume = (props) => (
   <Page {...props} style={styles.page}>
     <View style={styles.container}>
       <View style={styles.leftColumn}>
-        {/* <Education />
-        <Skills /> */}
-        <Text>Krizia Camille Uayan</Text>
+        <Header />
+        <Details />
+        <Skills />
+        <Links />
+        <Languages />
       </View>
-      {/* <Experience /> */}
+      <View style={styles.rightColumn}>
+        <Profile />
+        <Employment />
+        <Education />
+      </View>
     </View>
   </Page>
 );
 
 const DocumentResume = () => (
   <Document
-    author="Luke Skywalker"
-    keywords="awesome, resume, start wars"
-    subject="The resume of Luke Skywalker"
+    author="Krizia Camille Uayan"
+    keywords="front end engineer, resume"
+    subject="Resume of Krizia Camille Uayan"
     title="Resume"
   >
     <Resume size="A4" />
@@ -102,14 +82,31 @@ const DocumentResume = () => (
 
 export default DocumentResume;
 
-// const styles = StyleSheet.create({
-//   page: {
-//     flexDirection: "row",
-//     backgroundColor: "#E4E4E4",
-//   },
-//   section: {
-//     margin: 10,
-//     padding: 10,
-//     flexGrow: 1,
-//   },
-// });
+const styles = StyleSheet.create({
+  page: {
+    padding: 0,
+  },
+  container: {
+    flex: 1,
+    flexDirection: "row",
+  },
+  leftColumn: {
+    flexDirection: "column",
+    width: "30%",
+    paddingTop: 30,
+    paddingBottom: 30,
+    paddingRight: 25,
+    paddingLeft: 25,
+    backgroundColor: PrimaryColors[1],
+    color: "white",
+    height: "100%",
+  },
+  rightColumn: {
+    paddingTop: 30,
+    paddingBottom: 30,
+    paddingLeft: 25,
+    paddingRight: 25,
+    color: "#353535",
+    width: "70%",
+  },
+});

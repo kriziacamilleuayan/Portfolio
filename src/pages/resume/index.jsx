@@ -12,9 +12,6 @@ const Resume = () => {
       }}
     >
       <div>resume</div>
-      <PDFViewer width={500} height={500}>
-        <DocumentResume />
-      </PDFViewer>
 
       <PDFDownloadLink document={<DocumentResume />} fileName="somename.pdf">
         {({ blob, url, loading, error }) =>
@@ -25,6 +22,10 @@ const Resume = () => {
           )
         }
       </PDFDownloadLink>
+
+      <PDFViewer width={700} height={700}>
+        <DocumentResume />
+      </PDFViewer>
     </Box>
   );
 };
