@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 import Granim from "react-granim";
 import bgCover from "../../assets/banner.jpg";
-import { granimGradient } from "../../const";
+import { PrimaryColors, granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
 
 const Banner = () => {
@@ -34,11 +34,11 @@ const Banner = () => {
   };
 
   const sequence = [
-    "KRizia Ca",
+    "Zia",
     1000,
     "Krizia Uayan",
     2000,
-    "Camille Uay",
+    "Camille Uayan",
     1000,
     "Krizia Camille Uayan",
     25000,
@@ -59,7 +59,11 @@ const Banner = () => {
                   wrapper="h1"
                   className="animate__animated animate__fadeInRightBig"
                   speed={25}
-                  style={{ fontSize: "2em", display: "inline-block" }}
+                  style={{
+                    fontSize: "2em",
+                    display: "inline-block",
+                    color: PrimaryColors[0],
+                  }}
                   repeat={Infinity}
                 />
               </Box>
@@ -116,14 +120,14 @@ const BannerContent = styled(Box)({
     },
 
     h1: {
-      fontFamily: "'Press Start 2P', cursive",
+      fontFamily: "Source Code Pro Variable",
       margin: 0,
     },
 
     "h2, h3": {
       fontFamily: "Montserrat",
       span: {
-        color: "blue",
+        color: PrimaryColors[0],
         fontFamily: "Source Code Pro Variable",
       },
     },

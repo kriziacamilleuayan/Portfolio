@@ -20,7 +20,6 @@ export const NavItems = [
 export const drawerWidth = 240;
 
 export const granimGradient = [
-  ["#f89f5b", "#e53f71"],
   ["#e53f71", "#9c3587"],
   ["#9c3587", "#653780"],
   ["#653780", "#3f1651"],
@@ -29,5 +28,4 @@ export const granimGradient = [
 export const linkedIn = "https://linkedin.com/in/kriziauayan";
 export const github = "https://github.com/kriziacamilleuayan";
 export const portfolio = "https://kriziacamilleuayan.github.io/Portfolio/";
-
 export const mailTo = "mailto:kriziacamilleuayan@gmail.com";

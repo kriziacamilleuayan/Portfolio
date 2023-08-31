@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import DocumentResume from "./documentResume";
-import { Container, styled, Button, Skeleton } from "@mui/material";
+import { Container, styled, Button } from "@mui/material";
 import { PrimaryColors } from "../../const";
 import ScrollAnimation from "react-animate-on-scroll";
 

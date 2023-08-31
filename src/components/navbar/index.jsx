@@ -11,7 +11,7 @@ import { useScrollTrigger } from "@mui/material";
 import DrawerNav from "./drawer";
 import { styled } from "@mui/material/styles";
 import Granim from "react-granim";
-import { NavItems, granimGradient } from "../../const";
+import { HomePath, NavItems, PrimaryColors, granimGradient } from "../../const";
 import { NavLink } from "react-router-dom";
 
 const ElevationScroll = (elevProps) => {
@@ -65,9 +65,21 @@ const Navbar = (props) => {
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { sm: "block" } }}
+              className="animate__animated animate__bounceInLeft animate__slow"
+              sx={{
+                flexGrow: 1,
+                display: { sm: "block" },
+                fontFamily: "Reenie Beanie",
+                fontSize: "2.5rem",
+                color: PrimaryColors[0],
+              }}
             >
-              {/* Portfolio */}
+              <NavLink
+                to={HomePath}
+                style={{ textDecoration: "none", color: PrimaryColors[0] }}
+              >
+                Krizia Uayan
+              </NavLink>
             </Typography>
             <NavBox sx={{ display: { xs: "none", sm: "block" } }}>
               {NavItems.map((item) => (
@@ -99,17 +111,22 @@ export default Navbar;
 const NavBox = styled(Box)({
   ".isActive > button": {
     borderColor: "white",
+    color: PrimaryColors[0],
+
+    "&:hover": {
+      borderRadius: 0,
+    },
   },
 });
 
 const NavButton = styled(Button)({
-  fontFamily: "'Press Start 2P', cursive",
+  fontFamily: "Montserrat",
   color: "white",
   background: "transparent",
   border: "transparent solid 1px",
   borderRadius: "0",
-  margin: "0 4px",
-  paddingLeft: "10px",
+  margin: "0 8px",
+  padding: "8px 24px",
 
   "&:hover": {
     backgroundColor: "#ffffff42",
@@ -118,11 +135,9 @@ const NavButton = styled(Button)({
 
 const scrolledStyle = {
   color: "white",
-  background: "red",
   boxShadow: "none",
 };
 
 const topStyle = {
-  color: "red",
   background: "transparent",
 };

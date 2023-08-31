@@ -10,6 +10,7 @@ import "@fontsource/open-sans";
 import "@fontsource/press-start-2p";
 import "@fontsource/montserrat";
 import "@fontsource-variable/source-code-pro";
+import "@fontsource/reenie-beanie";
 import "./index.css";
 import "animate.css/animate.min.css";
 import { AboutPath, BasePath, HomePath, ResumePath } from "./const";
