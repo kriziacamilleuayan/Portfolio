@@ -7,9 +7,11 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
+  styled,
 } from "@mui/material";
 import PropTypes from "prop-types";
-import { NavItems, drawerWidth } from "../../const";
+import { HomePath, NavItems, PrimaryColors, drawerWidth } from "../../const";
+import { NavLink } from "react-router-dom";
 
 const DrawerNav = (props) => {
   const { window, handleDrawerToggle, mobileOpen } = props;
@@ -36,23 +38,40 @@ const DrawerNav = (props) => {
         }}
       >
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-          <Typography variant="h6" sx={{ my: 2 }}>
-            {/* Portfolio */}
+          <Typography
+            variant="h6"
+            sx={{
+              py: 2,
+              fontFamily: "Reenie Beanie",
+              fontSize: "2.5rem",
+              color: PrimaryColors[0],
+              background: PrimaryColors[3],
+            }}
+          >
+            <NavLink
+              to={HomePath}
+              style={{ textDecoration: "none", color: PrimaryColors[0] }}
+            >
+              KriziaUayan
+            </NavLink>
           </Typography>
           <Divider />
-          <List>
-            {NavItems.map((item) => (
+          <ListComponent>
+            {NavItems.map((item, i) => (
               <ListItem key={item.name} disablePadding>
-                <ListItemButton
-                  sx={{ textAlign: "center" }}
-                  component="a"
-                  href={item.href}
+                <NavLink
+                  to={item.href}
+                  className={({ isActive }) => (isActive ? "isActive" : "")}
+                  style={navlinkStyle}
+                  key={item.name}
                 >
-                  <ListItemText primary={item.name} />
-                </ListItemButton>
+                  <ListItemButton sx={{ textAlign: "center" }} component="div">
+                    <ListItemText primary={item.name} />
+                  </ListItemButton>
+                </NavLink>
               </ListItem>
             ))}
-          </List>
+          </ListComponent>
         </Box>
       </Drawer>
     </nav>
@@ -65,4 +84,19 @@ DrawerNav.propTypes = {
   handleDrawerToggle: PropTypes.func.isRequired,
   mobileOpen: PropTypes.bool.isRequired,
   window: PropTypes.instanceOf(window.constructor),
+};
+
+const ListComponent = styled(List)({
+  ".isActive ": {
+    // color: `${PrimaryColors[0]} !important`,
+    color: "white !important",
+    background: PrimaryColors[1],
+  },
+});
+
+const navlinkStyle = {
+  textDecoration: "none",
+  color: PrimaryColors[3],
+  textAlign: "center",
+  width: "100%",
 };

@@ -34,8 +34,8 @@ const Introduction = () => {
               programs for both business and consumer use. In addition to
               coding, I have a keen sense for layout and design, and I
               constantly keep the user experience in mind. When it comes to
-              front-end, I am always intrigued, and I try to learn better every
-              time.
+              front-end, I am always intrigued, and constantly try to learn
+              more.
             </p>
           </ScrollAnimation>
         </Box>

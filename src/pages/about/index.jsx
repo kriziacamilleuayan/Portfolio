@@ -8,7 +8,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const About = () => {
   const years = getNumYears();
-  const sequence = ["Krizia Camille Uayan?", 25000];
+  const sequence = ["Krizia Camille Uayan?"];
 
   return (
     <>
@@ -21,18 +21,9 @@ const About = () => {
             }}
           >
             <span className="animate__animated animate__fadeInRightBig">
-              Who is
+              Who is{" "}
             </span>
-            <TypeAnimation
-              sequence={sequence}
-              speed={1}
-              style={{
-                fontSize: "1em",
-                display: "inline-block",
-                marginLeft: "24px",
-                color: PrimaryColors[2],
-              }}
-            />
+            <TypeAnimation sequence={sequence} speed={10} style={nameStyle} />
           </Header>
         </Box>
         <Flex
@@ -42,26 +33,26 @@ const About = () => {
           }}
         >
           <Box className="left">
-            <p className="animate__animated animate__fadeInLeftBig animate__delay-1s">
+            <p className="animate__animated animate__fadeInLeftBig">
               Since starting my journey as an engineer over {years} years ago, I
               have worked with many startups; challenging myself to produce the
               highest quality, professional UX and UI. As a front end engineer,
               I endeavor to create simplistic, efficient, and elegant web
               applications that attract users.
             </p>
-            <p className="animate__animated animate__fadeInLeftBig animate__delay-2s">
+            <p className="animate__animated animate__fadeInLeftBig animate__delay-1s">
               Enhancing, improving, and simplifying code is part of what drives
               me to do what I do, but I always strive to advance my knowledge by
               constantly learning new languages, technologies, and frameworks to
               advance my skillset like React, Material UI, Typescript, Python,
               and much more.
             </p>
-            <p className="animate__animated animate__fadeInLeftBig animate__delay-3s">
+            <p className="animate__animated animate__fadeInLeftBig animate__delay-2s">
               I thrive when working in collaborative, cooperative team
               environments and love giving my coworkers opportunities to shine.
             </p>
           </Box>
-          <Box className="right animate__animated animate__rotateIn animate__delay-2s">
+          <Box className="right animate__animated animate__rotateIn animate__delay-1s">
             <img src={pic} alt="Krizia Camille Uayan" loading="lazy" />
           </Box>
         </Flex>
@@ -127,5 +118,12 @@ const Header = styled("h1")({
   fontFamily: "Source Code Pro Variable",
   fontSize: "3rem",
 });
+
+const nameStyle = {
+  fontSize: "1em",
+  display: "inline-block",
+  color: PrimaryColors[2],
+  fontFamily: "Source Code Pro Variable",
+};
 
 export default About;

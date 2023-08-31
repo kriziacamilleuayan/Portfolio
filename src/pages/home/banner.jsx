@@ -12,6 +12,7 @@ const Banner = () => {
     image: {
       source: bgCover,
       blendingMode: "screen",
+      position: ["left", "center"],
     },
     states: {
       "default-state": {
@@ -45,11 +46,19 @@ const Banner = () => {
   ];
   return (
     <MainContainer>
-      <Granim {...props} />
+      <Granim {...props} height="100vh" />
       <>
         <BannerContainer>
           <BannerContent>
-            <Box className="bannerText">
+            <Box
+              className="bannerText"
+              sx={{
+                alignItems: { xs: "center", sm: "flex-end" },
+                "h3,h2, .nameContainer": {
+                  textAlign: { xs: "center", sm: "left" },
+                },
+              }}
+            >
               <h3 className="animate__animated animate__fadeInRightBig animate__slow">
                 Hi, my name is
               </h3>
@@ -68,10 +77,23 @@ const Banner = () => {
                 />
               </Box>
               <h2 className="animate__animated animate__fadeInRightBig animate__slow">
-                I am a <span>Front-End Engineer</span>.
+                <span className="iam">I am a </span>
+                <span className="position">
+                  <span style={{ color: "lightblue" }}>{`<`}</span>
+                  Front-End Engineer
+                  <span style={{ color: "lightblue" }}>{`/>`}</span>
+                </span>
               </h2>
             </Box>
-            <Box className="animate__animated animate__fadeInRightBig bannerLeft">
+            <Box
+              sx={{
+                clipPath: {
+                  xs: "",
+                  sm: "polygon(100% 0%, 100% 51%, 100% 100%, 75% 100%, 50% 50%, 75% 0)",
+                },
+              }}
+              className="animate__animated animate__fadeInRightBig bannerLeft"
+            >
               <Granim {...props2} />
             </Box>
           </BannerContent>
@@ -107,7 +129,6 @@ const BannerContent = styled(Box)({
     zIndex: 2,
     display: "flex",
     justifyContent: "center",
-    alignItems: "flex-end",
     flexDirection: "column",
     height: "100vh",
     paddingRight: "32px",
@@ -125,9 +146,15 @@ const BannerContent = styled(Box)({
     },
 
     "h2, h3": {
-      fontFamily: "Montserrat",
-      span: {
+      fontWeight: "normal",
+
+      ".iam": {
+        fontFamily: "Montserrat",
+      },
+
+      ".position": {
         color: PrimaryColors[0],
+        fontWeight: "bolder",
         fontFamily: "Source Code Pro Variable",
       },
     },
@@ -136,7 +163,6 @@ const BannerContent = styled(Box)({
   ".bannerLeft": {
     width: "100vw",
     height: "100vh",
-    clipPath: "polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%)",
     position: "absolute",
     top: "0",
     right: "0",

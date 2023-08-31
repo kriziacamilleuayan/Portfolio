@@ -18,6 +18,7 @@ const Contact = () => {
           sm: "polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0)",
         },
         paddingTop: { xs: "80px", sm: "300px" },
+        marginTop: { xs: "0", sm: "-150px" },
       }}
     >
       <Container>
@@ -88,7 +89,6 @@ const MailButton = styled(Button)({
 const MainContainer = styled(Box)({
   background: PrimaryColors[4],
   paddingBottom: "30px",
-  marginTop: "-150px",
   marginBottom: "-1px",
 
   h2: {

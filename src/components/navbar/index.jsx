@@ -76,7 +76,10 @@ const Navbar = (props) => {
             >
               <NavLink
                 to={HomePath}
-                style={{ textDecoration: "none", color: PrimaryColors[0] }}
+                style={{
+                  textDecoration: "none",
+                  color: PrimaryColors[0],
+                }}
               >
                 KriziaUayan
               </NavLink>
