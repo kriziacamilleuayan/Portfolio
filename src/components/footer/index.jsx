@@ -1,5 +1,5 @@
 import { Box, Container, IconButton, styled } from "@mui/material";
-import { PrimaryColors, github, linkedIn } from "../../const";
+import { PrimaryColors, github, linkedIn, mailTo } from "../../const";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -11,9 +11,11 @@ const Footer = () => {
   };
 
   const handleMail = (e) => {
-    window.location.href = "mailto:kriziacamilleuayan@gmail.com";
+    window.location.href = mailTo;
     e.preventDefault();
   };
+
+  const currYear = new Date().getFullYear();
 
   return (
     <FooterBox>
@@ -38,7 +40,7 @@ const Footer = () => {
       <SubFooterBox>
         <Container maxWidth="xxl">
           <p>
-            Krizia Camille Uayan <span>©2023</span>
+            Krizia Camille Uayan <span>©{currYear}</span>
           </p>
         </Container>
       </SubFooterBox>

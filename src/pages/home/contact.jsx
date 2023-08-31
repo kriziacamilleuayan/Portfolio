@@ -1,12 +1,12 @@
 import { Box, Button, Container, styled } from "@mui/material";
-import { PrimaryColors } from "../../const";
+import { PrimaryColors, mailTo } from "../../const";
 import SendIcon from "@mui/icons-material/Send";
 import { NavLink } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const Contact = () => {
   const handleMail = (e) => {
-    window.location.href = "mailto:kriziacamilleuayan@gmail.com";
+    window.location.href = mailTo;
     e.preventDefault();
   };
 
