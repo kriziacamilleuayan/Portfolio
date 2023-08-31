@@ -1,17 +1,17 @@
 import { Box, styled } from "@mui/material";
 import Granim from "react-granim";
-import bgCover from "../../assets/bg3.jpg";
+import bgCover from "../../assets/banner.jpg";
 import { granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
 
 const Banner = () => {
   const props = {
     id: "canvas-image-blending",
-    direction: "top-bottom",
+    direction: "left-right",
     isPausedWhenNotInView: true,
     image: {
       source: bgCover,
-      blendingMode: "multiply",
+      blendingMode: "screen",
     },
     states: {
       "default-state": {
@@ -94,7 +94,7 @@ const BannerContent = styled(Box)({
   width: "100%",
   height: "100vh",
   color: "white",
-  fontFamily: "Open Sans",
+  fontFamily: "Montserrat",
   position: "relative",
 
   ".bannerText": {
@@ -132,7 +132,7 @@ const BannerContent = styled(Box)({
   ".bannerLeft": {
     width: "100vw",
     height: "100vh",
-    clipPath: "polygon(100% 0%, 100% 51%, 100% 100%, 75% 100%, 50% 50%, 75% 0)",
+    clipPath: "polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%)",
     position: "absolute",
     top: "0",
     right: "0",
