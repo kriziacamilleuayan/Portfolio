@@ -57,7 +57,7 @@ const DrawerNav = (props) => {
           </Typography>
           <Divider />
           <ListComponent>
-            {NavItems.map((item, i) => (
+            {NavItems.map((item) => (
               <ListItem key={item.name} disablePadding>
                 <NavLink
                   to={item.href}
