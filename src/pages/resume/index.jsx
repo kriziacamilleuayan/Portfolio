@@ -4,12 +4,17 @@ import DocumentResume from "./documentResume";
 import { Container, styled, Button } from "@mui/material";
 import { PrimaryColors } from "../../const";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useEffect } from "react";
 
 const Resume = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <TriangleTop className="nameContainer animate__animated animate__fadeInLeftBig animate__slower" />
-      <Container>
+      <Container sx={{ minHeight: "calc(100vh - 56px)" }}>
         <Box
           sx={{
             display: "flex",
@@ -35,9 +40,11 @@ const Resume = () => {
               )
             }
           </DownloadLink>
-          <PDFViewer width="100%" height={700} style={pdfStyle}>
-            <DocumentResume />
-          </PDFViewer>
+          <Box sx={{ display: { sm: "contents", xs: "none" } }}>
+            <PDFViewer width="100%" height={700} style={pdfStyle}>
+              <DocumentResume />
+            </PDFViewer>
+          </Box>
         </Box>
       </Container>
 

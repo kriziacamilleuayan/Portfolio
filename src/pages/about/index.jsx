@@ -5,10 +5,15 @@ import { getNumYears } from "../../helper";
 import pic from "./../../assets/krizia.jpg";
 import { TypeAnimation } from "react-type-animation";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useEffect } from "react";
 
 const About = () => {
   const years = getNumYears();
   const sequence = ["Krizia Camille Uayan?"];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
