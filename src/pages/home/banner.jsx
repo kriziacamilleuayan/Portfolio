@@ -1,17 +1,17 @@
 import { Box, styled } from "@mui/material";
 import Granim from "react-granim";
-import bgCover from "../../assets/bg3.jpg";
-import { granimGradient } from "../../const";
+import bgCover from "../../assets/banner.jpg";
+import { PrimaryColors, granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
 
 const Banner = () => {
   const props = {
     id: "canvas-image-blending",
-    direction: "top-bottom",
+    direction: "left-right",
     isPausedWhenNotInView: true,
     image: {
       source: bgCover,
-      blendingMode: "multiply",
+      blendingMode: "screen",
     },
     states: {
       "default-state": {
@@ -34,11 +34,11 @@ const Banner = () => {
   };
 
   const sequence = [
-    "KRizia Ca",
+    "Zia",
     1000,
     "Krizia Uayan",
     2000,
-    "Camille Uay",
+    "Camille Uayan",
     1000,
     "Krizia Camille Uayan",
     25000,
@@ -59,7 +59,11 @@ const Banner = () => {
                   wrapper="h1"
                   className="animate__animated animate__fadeInRightBig"
                   speed={25}
-                  style={{ fontSize: "2em", display: "inline-block" }}
+                  style={{
+                    fontSize: "2em",
+                    display: "inline-block",
+                    color: PrimaryColors[0],
+                  }}
                   repeat={Infinity}
                 />
               </Box>
@@ -94,7 +98,7 @@ const BannerContent = styled(Box)({
   width: "100%",
   height: "100vh",
   color: "white",
-  fontFamily: "Open Sans",
+  fontFamily: "Montserrat",
   position: "relative",
 
   ".bannerText": {
@@ -116,14 +120,14 @@ const BannerContent = styled(Box)({
     },
 
     h1: {
-      fontFamily: "'Press Start 2P', cursive",
+      fontFamily: "Source Code Pro Variable",
       margin: 0,
     },
 
     "h2, h3": {
       fontFamily: "Montserrat",
       span: {
-        color: "blue",
+        color: PrimaryColors[0],
         fontFamily: "Source Code Pro Variable",
       },
     },
@@ -132,7 +136,7 @@ const BannerContent = styled(Box)({
   ".bannerLeft": {
     width: "100vw",
     height: "100vh",
-    clipPath: "polygon(100% 0%, 100% 51%, 100% 100%, 75% 100%, 50% 50%, 75% 0)",
+    clipPath: "polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%)",
     position: "absolute",
     top: "0",
     right: "0",

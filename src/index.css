@@ -1,6 +1,7 @@
 body {
   font-family: Montserrat;
-  transition: "0.3s",
+  transition: "0.3s";
+  user-select: none;
 }
 
 /* width */

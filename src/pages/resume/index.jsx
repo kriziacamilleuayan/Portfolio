@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import DocumentResume from "./documentResume";
-import { Container, styled, Button, Skeleton } from "@mui/material";
+import { Container, styled, Button } from "@mui/material";
 import { PrimaryColors } from "../../const";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -22,14 +22,16 @@ const Resume = () => {
           <DownloadLink
             document={<DocumentResume />}
             fileName="FE Engineer - Krizia Camille Uayan.pdf"
-            className="nameContainer animate__animated animate__bounceInDown animate__slower"
+            className="nameContainer animate__animated animate__bounceInDown"
             style={{ textDecoration: "none" }}
           >
             {({ loading }) =>
               loading ? (
-                <Skeleton variant="rectangular" width="100%" height={118} />
+                <Button disabled className="buttonDL disabled">
+                  Loading ...
+                </Button>
               ) : (
-                <Button>Download Resume</Button>
+                <Button className="buttonDL download">Download Resume</Button>
               )
             }
           </DownloadLink>
@@ -70,20 +72,28 @@ const TriangleBottom = styled(Box)({
 const DownloadLink = styled(PDFDownloadLink)({
   color: PrimaryColors[3],
 
-  button: {
+  ".buttonDL": {
     fontFamily: "Montserrat",
-    border: `2px ${PrimaryColors[2]} solid`,
-    color: "white",
-    background: PrimaryColors[2],
     padding: "8px 24px",
     fontSize: "1.5rem",
     borderRadius: "30px",
     textDecoration: "none",
     transition: "0.3s",
+  },
+
+  ".download": {
+    color: "white",
+    background: PrimaryColors[2],
+    border: `2px ${PrimaryColors[2]} solid`,
 
     "&:hover": {
       color: PrimaryColors[2],
       borderRadius: "0",
+      background: "transparent",
+    },
+
+    ".disabled": {
+      border: "2px gray solid",
     },
   },
 });
