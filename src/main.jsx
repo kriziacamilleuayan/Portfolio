@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./pages/home";
 import Resume from "./pages/resume";
 import Layout from "./pages/layout.jsx";
@@ -13,33 +13,28 @@ import "@fontsource-variable/source-code-pro";
 import "@fontsource/reenie-beanie";
 import "./index.css";
 import "animate.css/animate.min.css";
-import { AboutPath, BasePath, HomePath, ResumePath } from "./const";
+import { AboutPath, HomePath, ResumePath } from "./const";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: HomePath,
-      element: <Layout />,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-        {
-          path: ResumePath,
-          element: <Resume />,
-        },
-        {
-          path: AboutPath,
-          element: <About />,
-        },
-      ],
-    },
-  ],
+const router = createHashRouter([
   {
-    basename: BasePath,
-  }
-);
+    path: HomePath,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: ResumePath,
+        element: <Resume />,
+      },
+      {
+        path: AboutPath,
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

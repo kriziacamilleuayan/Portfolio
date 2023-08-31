@@ -7,7 +7,7 @@ export const PrimaryColors = [
 ];
 
 export const BasePath = `/Portfolio`;
-export const HomePath = `/`;
+export const HomePath = ``;
 export const ResumePath = `${HomePath}Resume`;
 export const AboutPath = `${HomePath}About`;
 
