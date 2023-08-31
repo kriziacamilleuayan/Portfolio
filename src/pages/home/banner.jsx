@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material";
 import Granim from "react-granim";
-import bgCover from "../../assets/bg2.jpg";
+import bgCover from "../../assets/bg3.jpg";
 import { granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
 
