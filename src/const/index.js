@@ -6,9 +6,10 @@ export const PrimaryColors = [
   "#3f1651",
 ];
 
-export const HomePath = `/Portfolio`;
-export const ResumePath = `${HomePath}/Resume`;
-export const AboutPath = `${HomePath}/About`;
+export const BasePath = `/Portfolio`;
+export const HomePath = `/`;
+export const ResumePath = `${HomePath}Resume`;
+export const AboutPath = `${HomePath}About`;
 
 export const NavItems = [
   { name: "Home", href: HomePath },
@@ -26,7 +27,7 @@ export const granimGradient = [
 ];
 
 export const linkedIn = "https://linkedin.com/in/kriziauayan";
-
 export const github = "https://github.com/kriziacamilleuayan";
+export const portfolio = "https://kriziacamilleuayan.github.io/Portfolio/";
 
 export const mailTo = "mailto:kriziacamilleuayan@gmail.com";

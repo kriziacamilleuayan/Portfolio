@@ -23,7 +23,6 @@ const About = () => {
           </span>
           <TypeAnimation
             sequence={sequence}
-            wrapper="h1"
             speed={1}
             style={{
               fontSize: "1em",

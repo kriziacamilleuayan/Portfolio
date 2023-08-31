@@ -12,28 +12,33 @@ import "@fontsource/montserrat";
 import "@fontsource-variable/source-code-pro";
 import "./index.css";
 import "animate.css/animate.min.css";
-import { AboutPath, HomePath, ResumePath } from "./const";
+import { AboutPath, BasePath, HomePath, ResumePath } from "./const";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: HomePath,
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: ResumePath,
+          element: <Resume />,
+        },
+        {
+          path: AboutPath,
+          element: <About />,
+        },
+      ],
+    },
+  ],
   {
-    path: HomePath,
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: ResumePath,
-        element: <Resume />,
-      },
-      {
-        path: AboutPath,
-        element: <About />,
-      },
-    ],
-  },
-]);
+    basename: BasePath,
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

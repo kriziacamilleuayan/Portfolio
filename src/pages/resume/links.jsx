@@ -1,10 +1,13 @@
 import { View, StyleSheet, Text, Link } from "@react-pdf/renderer";
-import { github, linkedIn } from "../../const";
+import { github, linkedIn, portfolio } from "../../const";
 
 const Links = () => {
   return (
     <View style={styles.view}>
       <Text style={styles.header}>Links</Text>
+      <Link style={styles.detail} src={portfolio}>
+        Portfolio
+      </Link>
       <Link style={styles.detail} src={github}>
         Github
       </Link>
