@@ -6,10 +6,14 @@ export const PrimaryColors = [
   "#3f1651",
 ];
 
+export const HomePath = `/Portfolio`;
+export const ResumePath = `${HomePath}/Resume`;
+export const AboutPath = `${HomePath}/About`;
+
 export const NavItems = [
-  { name: "Home", href: "/" },
-  { name: "Resume", href: "/resume" },
-  { name: "About", href: "/about" },
+  { name: "Home", href: HomePath },
+  { name: "Resume", href: ResumePath },
+  { name: "About", href: AboutPath },
 ];
 
 export const drawerWidth = 240;

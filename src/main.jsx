@@ -12,10 +12,11 @@ import "@fontsource/montserrat";
 import "@fontsource-variable/source-code-pro";
 import "./index.css";
 import "animate.css/animate.min.css";
+import { AboutPath, HomePath, ResumePath } from "./const";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: HomePath,
     element: <Layout />,
     children: [
       {
@@ -23,11 +24,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "resume",
+        path: ResumePath,
         element: <Resume />,
       },
       {
-        path: "about",
+        path: AboutPath,
         element: <About />,
       },
     ],
