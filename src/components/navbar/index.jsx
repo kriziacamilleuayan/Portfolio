@@ -78,7 +78,7 @@ const Navbar = (props) => {
                 to={HomePath}
                 style={{ textDecoration: "none", color: PrimaryColors[0] }}
               >
-                Krizia Uayan
+                KriziaUayan
               </NavLink>
             </Typography>
             <NavBox sx={{ display: { xs: "none", sm: "block" } }}>
@@ -112,10 +112,6 @@ const NavBox = styled(Box)({
   ".isActive > button": {
     borderColor: "white",
     color: PrimaryColors[0],
-
-    "&:hover": {
-      borderRadius: 0,
-    },
   },
 });
 
@@ -127,6 +123,7 @@ const NavButton = styled(Button)({
   borderRadius: "0",
   margin: "0 8px",
   padding: "8px 24px",
+  transition: "0.3s",
 
   "&:hover": {
     backgroundColor: "#ffffff42",
