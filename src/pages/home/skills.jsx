@@ -35,7 +35,7 @@ const Skills = () => {
             <p>Chakra UI</p>
             <p>Material UI</p>
             <p>Materialize CSS</p>
-            <p>Sass</p>
+            <p>SASS/LESS</p>
             <p>styled-components</p>
             <p>emotion</p>
           </Box>
@@ -58,6 +58,7 @@ const Skills = () => {
             <p>TypeScript</p>
             <p>JavaScript</p>
             <p>React Native</p>
+            <p>HTML & CSS</p>
             <p>NextJS</p>
             <p>Redux</p>
             <p>RxJS</p>
