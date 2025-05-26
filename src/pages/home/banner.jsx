@@ -1,19 +1,13 @@
 import { Box, styled } from "@mui/material";
 import Granim from "react-granim";
-import bgCover from "../../assets/banner.jpg";
-import { PrimaryColors, granimGradient } from "../../const";
 import { TypeAnimation } from "react-type-animation";
+import { PrimaryColors, granimGradient } from "../../const";
 
 const Banner = () => {
   const props = {
     id: "canvas-image-blending",
-    direction: "left-right",
+    direction: "diagonal",
     isPausedWhenNotInView: true,
-    image: {
-      source: bgCover,
-      blendingMode: "screen",
-      position: ["left", "center"],
-    },
     states: {
       "default-state": {
         gradients: granimGradient,

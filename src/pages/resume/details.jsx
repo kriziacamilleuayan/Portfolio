@@ -4,7 +4,7 @@ const Details = () => {
   return (
     <View style={styles.view}>
       <Text style={styles.header}>Details</Text>
-      <Text style={styles.detail}>Makati City, 1214</Text>
+      <Text style={styles.detail}>Taguig City, 1634</Text>
       <Text style={styles.detail}>Philippines</Text>
       <Text style={styles.detail}>+639069495811</Text>
       <Text style={styles.email}>kriziacamilleuayan@gmail.com</Text>

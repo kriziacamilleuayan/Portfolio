@@ -25,19 +25,13 @@ const Skills = () => {
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__slideInLeft" animateOnce={true}>
           <Box>
-            <p>User Interface</p>
-            <p>User Experience</p>
             <p>Figma</p>
-            <p>Adobe Photoshop</p>
-            <p>Clip Studio Paint</p>
             <p>Bootstrap</p>
             <p>Tailwind CSS</p>
-            <p>Chakra UI</p>
             <p>Material UI</p>
-            <p>Materialize CSS</p>
             <p>SASS/LESS</p>
             <p>styled-components</p>
-            <p>emotion</p>
+            <p>Emotion CSS</p>
           </Box>
         </ScrollAnimation>
       </SkillsContainer>
@@ -57,17 +51,15 @@ const Skills = () => {
             <p>React</p>
             <p>TypeScript</p>
             <p>JavaScript</p>
+            <p>NextJS</p>
             <p>React Native</p>
             <p>HTML & CSS</p>
-            <p>NextJS</p>
             <p>Redux</p>
-            <p>RxJS</p>
+            <p>React Query</p>
             <p>git</p>
-            <p>Python</p>
             <p>Github</p>
-            <p>Gitlab</p>
             <p>Visual Studio Code</p>
-            <p>Storybook</p>
+            <p>Prisma</p>
           </Box>
         </ScrollAnimation>
       </SkillsContainer>

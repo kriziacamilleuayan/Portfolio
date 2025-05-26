@@ -7,14 +7,14 @@ const Skills = () => {
       <Text style={styles.detail}>React</Text>
       <Text style={styles.detail}>React Native</Text>
       <Text style={styles.detail}>Redux</Text>
+      <Text style={styles.detail}>React Query</Text>
       <Text style={styles.detail}>Next.js</Text>
       <Text style={styles.detail}>TypeScript</Text>
       <Text style={styles.detail}>JavaScript</Text>
+      <Text style={styles.detail}>Prisma</Text>
       <Text style={styles.detail}>Git</Text>
       <Text style={styles.detail}>HTML & CSS</Text>
-      <Text style={styles.detail}>SASS & LESS</Text>
       <Text style={styles.detail}>Figma</Text>
-      <Text style={styles.detail}>Python</Text>
     </View>
   );
 };

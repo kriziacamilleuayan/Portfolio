@@ -7,9 +7,10 @@ const Profile = () => {
       <Text style={styles.header}>Profile</Text>
       <View>
         <Text style={styles.summary}>
-          I seek to pursue opportunities that allow me to enhance my front end
-          development skills and cultivate a positive workplace while learning
-          from, and building, a collaborative team environment.
+          I enjoy turning design ideas into responsive, accessible, and polished
+          interfaces. I am looking for opportunities where I can deepen my
+          skills, explore new technologies, and contribute to a collaborative
+          team that values creativity, growth, and continuous learning.
         </Text>
       </View>
     </View>

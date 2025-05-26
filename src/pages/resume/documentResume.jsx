@@ -4,8 +4,9 @@ import Header from "./header";
 import Profile from "./profile";
 
 import MontserratRegular from "./fonts/Montserrat-Regular.ttf";
-import MontserratBold from "./fonts/Montserrat-Bold.ttf";
 import MontserratSemiBold from "./fonts/Montserrat-SemiBold.ttf";
+import MontserratBold from "./fonts/Montserrat-Bold.ttf";
+
 import SourceCodeProRegular from "./fonts/SourceCodePro-Regular.ttf";
 import SourceCodeProBold from "./fonts/SourceCodePro-Bold.ttf";
 import SourceCodeProSemiBold from "./fonts/SourceCodePro-SemiBold.ttf";
@@ -24,7 +25,7 @@ Font.register({
     },
     {
       src: MontserratSemiBold,
-      fontWeight: "semiBold",
+      fontWeight: "semibold",
     },
     {
       src: MontserratBold,
